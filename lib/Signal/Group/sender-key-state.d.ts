@@ -1,0 +1,16 @@
+import { SenderChainKey } from './sender-chain-key.js';
+import { SenderMessageKey } from './sender-message-key.js';
+export declare class SenderKeyState {
+    MAX_MESSAGE_KEYS: number;
+    senderKeyStateStructure: any;
+    constructor(id: any, iteration: any, chainKey: any, signatureKeyPair: any, signatureKeyPublic: any, signatureKeyPrivate: any, senderKeyStateStructure: any);
+    getKeyId(): any;
+    getSenderChainKey(): SenderChainKey;
+    setSenderChainKey(chainKey: any): void;
+    getSigningKeyPublic(): any;
+    getSigningKeyPrivate(): any;
+    hasSenderMessageKey(iteration: any): any;
+    addSenderMessageKey(senderMessageKey: any): void;
+    removeSenderMessageKey(iteration: any): SenderMessageKey | null;
+    getStructure(): any;
+}
